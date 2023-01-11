@@ -1,4 +1,4 @@
-# Project---A-local-website-about-myself
+# Project---A-website-about-myself
 
 This website has two parts.
 
