@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Yuchi Zheng" />
+        <title>Welcome - Yuchi Zheng</title>
+        <link rel="stylesheet" href="normalize1.css" />
+        <script src="contact.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1>Welcome To My Website</h1>
+
+            </header>
+            <nav>
+                <div class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="interests.html">Interests</a></li>
+                        <li><a href="expertise.html">Expertise</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+
+            <main>
+                
+                <div class="main_contact">
+
+                    <form id ="form1" name="signup"   
+                        action="https://httpbin.org/post" method="post" autocomplete="on" onsubmit='return formValidation();'>
+                    <h3 class="infoRegi">Contact Me</h3>
+                    <!-- required -->
+                    <div>
+                        <label for="FirstName">Your First Name (*):</label>
+                        <input type="text" id="FirstName" name="FirstName" required placeholder="Not empty" autofocus/>
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="LastName">Your Last Name (*):</label>
+                        <input type="text" id="LastName" name="LastName" placeholder="Not empty" required/>
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="Email">Email (*):</label>
+                        <input type="email" id="Email" name="Email" required/>
+                        <span></span>
+                    </div>
+                    <br>
+
+                    <div class="message">Messages (*):</div> 
+                    <div >
+                        <label for="message"></label>
+                        <textarea id="message" name="message" cols="69" rows="3" required minlength="1" placeholder="Please leave your messages here."></textarea>
+                        <span></span>
+                    </div>
+
+                    <!-- optional -->
+                    <hr>
+                    <div class="optional"><em>The following is optional to fill in.</em></div>
+                    <div>
+                        <br>
+                        <label for="phoneNum">Phone#:</label>
+                        <input type="tel" id="phoneNum" name="phoneNum"  placeholder="(xxx) xxx-xxxx, eg. (999) 999-9999" 
+                        pattern="^\((\d{3}\))\s\d{3}-\d{4}$"/>
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="company">Company:</label>
+                        <input type="text" id="company" name="company" />
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="occupation">Occupation:</label>
+                        <input type="text" id="occupation" name="occupation" />
+                        <span></span>
+                    </div>
+
+                    <!-- address -->
+                    <div>
+                        <label for="unit">Unit#:</label>
+                        <input type="number" id="unit" name="Unit"/>
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="Street">Street:</label>
+                        <input type="text" id="Street" name="Street" placeholder="Cannot contain digits." />
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="City">City:</label>
+                        <input type="text" id="City" name="City" />
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="Province">Province:</label>
+                        <select id="Province" name="Province"  size="1">
+                          <option value="Alberta">Alberta</option>
+                          <option value="British Columbia">British Columbia</option>
+                          <option value="Manitoba">Manitoba</option>
+                          <option value="New Brunswick">New Brunswick</option>
+                          <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                          <option value="Northwest Territories">Northwest Territories</option>
+                          <option value="Nova Scotia">Nova Scotia</option>
+                          <option value="Nunavut">Nunavut</option>
+                          <option value="Ontario" selected>Ontario</option>
+                          <option value="Prince Edward Island">Prince Edward Island</option>
+                          <option value="Quebec">Quebec</option>
+                          <option value="Saskatchewan">Saskatchewan</option>
+                          <option value="Yukon">Yukon</option>
+                        </select>
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="Postal_code">Postal Code:</label>
+                        <input type="text" id="Postal_code" name="Postal_code" placeholder="eg. C1A1A7" />
+                        <span></span>
+                    </div>
+
+                    <!-- <div>
+                        <br>
+                        <label for="phoneNum">Phone#:</label>
+                        <input type="tel" id="phoneNum" name="phoneNum"  placeholder="xxx-xxx-xxxx, eg. 111-111-1111"/>
+                        <span></span>
+                    </div> -->
+
+                    
+
+                    <!-- <div>
+                        <label for="UserName">User Name:</label>
+                        <input type="text" id="UserName" name="UserName" placeholder="At least 6 characters"  pattern="^[A-Za-z][A-Za-z\d]{5,}$" />
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="password">Password (*):</label>
+                        <input type="password" id="password" name="password" pattern="^[A-Za-z](?=.*[A-Z])(?=.*\d)[A-Za-z\d]{7}$"/>
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="confirm_password">Confirm Password (*):</label>
+                        <input type="password" name="confirm_password" id="confirm_password" />
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <input type="hidden" name="lastName" id="lastName" value="Zheng" />
+                        <input type="hidden" name="studentId" id="studentId" value="025-848-151"/>
+                        <span></span>
+                    </div> -->
+
+                    <div id='errors'></div>
+		            <br>
+                   
+                    <p class="button">
+                        <input type="submit" value="Submit"/> &nbsp; &nbsp;
+                        <input type ="reset" value = " Clear " onclick="clearErrors();"/> 
+                    </p>
+
+                    </form>        
+                </div>
+                
+            </main>
+
+            <!-- <aside>
+                <div class="aside">
+                    <p>
+                        "I declare that my assignment is wholly my own work in
+                        accordance with Seneca Academic Policy. No part of this
+                        assignment has been copied manually or electronically from
+                        any other source (including web sites) except for the
+                        information supplied by the WEB222 instructor and / or
+                        made available in this assignment for my use. I also
+                        declare that no part of this assignment has been
+                        distributed to other students."<br>
+                        <hr>
+                        <b>Name: </b>Yuchi Zheng<br>
+                        <b>ID: </b>025-848-151<br>
+                        <b>Date: </b> 15, August, 2022"  
+                    </p>
+                </div>
+                
+            </aside> -->
+
+            
+            <footer><h3>&copy; 2022 Yuchi Zheng</h3></footer>
+        </div>
+    </body>
+</html>
